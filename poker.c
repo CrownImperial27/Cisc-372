@@ -6,7 +6,6 @@
 
 typedef enum {CLUBS=0,SPADES=1,HEARTS=2,DIAMONDS=3} SUIT;
 
-MPI_Init()
 
 typedef struct _card {
 	int rank;
