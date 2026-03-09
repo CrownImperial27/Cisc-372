@@ -166,7 +166,7 @@ int main(int argc,char** argv){
     float percent;
     Hand pokerHand;
 
-    srand(time(NULL) + my_rank);
+     srand(time(NULL)+my_rank);
 
     int cnt;
 
