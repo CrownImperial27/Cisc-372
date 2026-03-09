@@ -147,7 +147,7 @@ void makeStraightFlush3(Hand hand){
 }
 
 int main(int argc,char** argv){
-	MPI_Init(&argc,&argv)
+	MPI_Init(&argc,&argv);
 	int straightFlushes=0;
 	float percent;
 	Hand pokerHand;
@@ -176,5 +176,5 @@ int main(int argc,char** argv){
 	printf("We found %d straight flushes out of %d hands or %f percent.\n",straightFlushes,cnt,percent);
 
 	return 0;
-	MPI_Finalize()
+	MPI_Finalize();
 }
