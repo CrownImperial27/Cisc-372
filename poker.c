@@ -147,7 +147,7 @@ void makeStraightFlush3(Hand hand){
 }
 
 int main(int argc,char** argv){
-	MPI_Init(argc,argv)
+	MPI_Init(&argc,&argv)
 	int straightFlushes=0;
 	float percent;
 	Hand pokerHand;
