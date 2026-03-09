@@ -31,9 +31,12 @@ void randomCard(Card* card){
  * Arguments: cnt: an output variable to hold the selected number of trials
  * Returns: None
  */
- void getTotalTrials(int* cnt){
+  void getTotalTrials(int* cnt,int rank) {
+	if (rank == 0 ) {
 	printf("Enter the number of trials:\n");
 	scanf("%d",cnt);
+	MPI_Bcast(&cnt, 1, MPI_INT, 0, MPI_COMM_WORLD);
+	}
  }
 
 /*inHand
@@ -160,9 +163,7 @@ int main(int argc,char** argv){
 	Hand pokerHand;
 	srand(time(0));
 	int cnt;
-	if (my_rank == 0 ) {
-		getTotalTrials(&cnt);
-	};
+	getTotalTrials(&cnt, my_rank);
 	for (int i=0;i<cnt;i++){
 		int cardCount=0;
 		while (cardCount<5){
@@ -181,7 +182,7 @@ int main(int argc,char** argv){
 			straightFlushes++;
 	}
 
-	MPI_Bcast(&cnt, 1, MPI_INT, 0, MPI_COMM_WORLD);
+	
 	percent=(float)straightFlushes/(float)cnt*100.0;
 
 	if (my_rank == 0) {
