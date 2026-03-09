@@ -215,7 +215,7 @@ int main(int argc,char** argv){
 
     /* Rank 0 gets user input */
     if (my_rank == 0){
-        getTotalTrials(&cnt);
+        getTotalTrials(&cnt, my_rank);
     }
 
     /* Broadcast total trials to all processes */
