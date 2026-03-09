@@ -146,14 +146,23 @@ void makeStraightFlush3(Hand hand){
 	hand[4].suit=SPADES;
 }
 
+
+
 int main(int argc,char** argv){
+	int comm_sz;
+	int my_rank;
 	MPI_Init(&argc,&argv);
 	int straightFlushes=0;
+
+	MPI_Comm_Size(MPI_COMM_WORLD,&comm_sz)
+	MPI_Comm_Rank(MPI_COMM_WORLD,&my_rank)
 	float percent;
 	Hand pokerHand;
 	srand(time(0));
 	int cnt;
-	getTotalTrials(&cnt);
+	if (my_rank == 0 ) {
+		getTotalTrials(&cnt);
+	};
 	for (int i=0;i<cnt;i++){
 		int cardCount=0;
 		while (cardCount<5){
@@ -171,10 +180,14 @@ int main(int argc,char** argv){
 		if (isStraightFlush(pokerHand))
 			straightFlushes++;
 	}
+
+	MPI_Bcast(&cnt, 1, MPI_INT, 0, MPI_COMM_WORLD);
 	percent=(float)straightFlushes/(float)cnt*100.0;
 
-	printf("We found %d straight flushes out of %d hands or %f percent.\n",straightFlushes,cnt,percent);
-
-	return 0;
+	if (my_rank == 0) {
+    printf("We found %d straight flushes out of %d hands or %f percent.\n",
+           straightFlushes,cnt,percent);
+}
 	MPI_Finalize();
+	return 0;
 }
