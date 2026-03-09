@@ -3,7 +3,6 @@
 #include <time.h>
 #include <mpi.h>
 
-MPI_Init()
 
 typedef enum {CLUBS=0,SPADES=1,HEARTS=2,DIAMONDS=3} SUIT;
 
