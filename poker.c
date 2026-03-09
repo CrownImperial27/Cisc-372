@@ -31,13 +31,14 @@ void randomCard(Card* card){
  * Arguments: cnt: an output variable to hold the selected number of trials
  * Returns: None
  */
-  void getTotalTrials(int* cnt,int rank) {
-	if (rank == 0 ) {
-	printf("Enter the number of trials:\n");
-	scanf("%d",cnt);
-	MPI_Bcast(&cnt, 1, MPI_INT, 0, MPI_COMM_WORLD);
-	}
- }
+void getTotalTrials(int* cnt,int rank) {
+    if (rank == 0 ) {
+        printf("Enter the number of trials:\n");
+        scanf("%d",cnt);
+    }
+
+    MPI_Bcast(cnt, 1, MPI_INT, 0, MPI_COMM_WORLD);
+}
 
 /*inHand
  * Description: checks if a card is in the hand so far
@@ -171,12 +172,10 @@ int main(int argc,char** argv){
     int cnt;
 
     /* Rank 0 gets user input */
-    if (my_rank == 0){
-        getTotalTrials(&cnt, my_rank);
-    }
+    getTotalTrials(&cnt, my_rank);
 
     /* Broadcast total trials to all processes */
-    MPI_Bcast(&cnt, 1, MPI_INT, 0, MPI_COMM_WORLD);
+
 
     /* Divide work between processes */
     int local_trials = cnt / comm_sz;
