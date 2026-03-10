@@ -1,0 +1,135 @@
+Script started on 2026-03-09 18:14:40-04:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="156" LINES="41"]
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 1 ./poker
+Enter the number of trials:
+1000
+We found 0 straight flushes out of 1000 hands or 0.000000 percent.
+Elapsed time: 0.000421 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 1 ./poker
+Enter the number of trials:
+10000
+We found 0 straight flushes out of 10000 hands or 0.000000 percent.
+Elapsed time: 0.003913 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 1 ./poker
+Enter the number of trials:
+100000
+We found 0 straight flushes out of 100000 hands or 0.000000 percent.
+Elapsed time: 0.027364 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 1 ./poker
+Enter the number of trials:
+1000000
+We found 11 straight flushes out of 1000000 hands or 0.001100 percent.
+Elapsed time: 0.203257 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 1 ./poker
+Enter the number of trials:
+10000000
+We found 166 straight flushes out of 10000000 hands or 0.001660 percent.
+Elapsed time: 1.705292 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 2 ./poker
+Enter the number of trials:
+1000
+We found 0 straight flushes out of 1000 hands or 0.000000 percent.
+Elapsed time: 0.000168 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 2 ./poker
+Enter the number of trials:
+10000
+We found 0 straight flushes out of 10000 hands or 0.000000 percent.
+Elapsed time: 0.001523 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 2 ./poker
+Enter the number of trials:
+100000
+We found 1 straight flushes out of 100000 hands or 0.001000 percent.
+Elapsed time: 0.013823 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 2 ./poker
+Enter the number of trials:
+1000000
+We found 20 straight flushes out of 1000000 hands or 0.002000 percent.
+Elapsed time: 0.137138 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 2 ./poker
+Enter the number of trials:
+10000000
+We found 157 straight flushes out of 10000000 hands or 0.001570 percent.
+Elapsed time: 1.373172 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 4 ./poker
+Enter the number of trials:
+1000
+We found 0 straight flushes out of 1000 hands or 0.000000 percent.
+Elapsed time: 0.000097 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 4 ./poker
+Enter the number of trials:
+10000
+We found 0 straight flushes out of 10000 hands or 0.000000 percent.
+Elapsed time: 0.000795 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 4 ./poker
+Enter the number of trials:
+100000
+We found 2 straight flushes out of 100000 hands or 0.002000 percent.
+Elapsed time: 0.006860 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 4 ./poker
+Enter the number of trials:
+1000000
+We found 15 straight flushes out of 1000000 hands or 0.001500 percent.
+Elapsed time: 0.068335 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 4 ./poker
+Enter the number of trials:
+10000000
+We found 154 straight flushes out of 10000000 hands or 0.001540 percent.
+Elapsed time: 0.693935 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 8 ./poker
+Enter the number of trials:
+1000
+We found 0 straight flushes out of 1000 hands or 0.000000 percent.
+Elapsed time: 0.000077 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 8 ./poker
+Enter the number of trials:
+10000
+We found 0 straight flushes out of 10000 hands or 0.000000 percent.
+Elapsed time: 0.000484 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 8 ./poker
+Enter the number of trials:
+100000
+We found 0 straight flushes out of 100000 hands or 0.000000 percent.
+Elapsed time: 0.003989 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 8 ./poker
+Enter the number of trials:
+100000
+We found 1 straight flushes out of 100000 hands or 0.001000 percent.
+Elapsed time: 0.003874 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 8 ./poker
+Enter the number of trials:
+1000000
+We found 11 straight flushes out of 1000000 hands or 0.001100 percent.
+Elapsed time: 0.038546 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 8 ./poker
+Enter the number of trials:
+10000000
+We found 148 straight flushes out of 10000000 hands or 0.001480 percent.
+Elapsed time: 0.382419 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 16 ./poker
+Enter the number of trials:
+1000
+We found 0 straight flushes out of 1000 hands or 0.000000 percent.
+Elapsed time: 0.000086 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 16 ./poker
+Enter the number of trials:
+10000
+We found 0 straight flushes out of 10000 hands or 0.000000 percent.
+Elapsed time: 0.000281 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 16 ./poker
+Enter the number of trials:
+100000
+We found 0 straight flushes out of 100000 hands or 0.000000 percent.
+Elapsed time: 0.002268 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 16 ./poker
+Enter the number of trials:
+1000000
+We found 22 straight flushes out of 1000000 hands or 0.002200 percent.
+Elapsed time: 0.022167 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ srun -n 16 ./poker
+Enter the number of trials:
+10000000
+We found 139 straight flushes out of 10000000 hands or 0.001390 percent.
+Elapsed time: 0.220673 seconds
+arronye@cisc372:~/cisc372/Cisc-372$ exit
+exit
+
+Script done on 2026-03-09 18:20:23-04:00 [COMMAND_EXIT_CODE="0"]
